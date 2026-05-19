@@ -1,0 +1,8 @@
+{
+  "version": "1.0.31",
+  "url": "https://example.com/downloads/Veyo%20Setup%201.0.31.exe",
+  "sha256": "",
+  "warning": "This build is old. Update Veyo for fixes, calls and security improvements.",
+  "notes": "Stability and security update.",
+  "silent": true
+}
