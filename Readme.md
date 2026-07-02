@@ -1,221 +1,313 @@
-# VEYO
+# VEYO MESSENGER
 
-## Secure Real-Time Communication Platform
-
-Veyo is a next-generation messaging platform inspired by modern communication systems such as Discord and Telegram. It is designed with a strong focus on privacy, performance, and full user interface customization.
-
-The project is currently under active development by a single independent developer and is intended to evolve into a fully scalable communication ecosystem.
+## A messenger I’m building on my own
 
 ---
 
-## Product Vision
+# Introduction: why Veyo exists
 
-Veyo aims to redefine digital communication by combining:
+To be honest, Veyo didn’t start as some “big company idea” or a team project.
 
-- Real-time messaging at scale
-- User-owned identity and customization
-- Privacy-first architecture
-- High-performance media handling
-- Modular moderation systems
+I just wanted to build a messenger that feels right.
 
-The platform is built with the assumption that user data should remain strictly controlled, isolated, and inaccessible by default.
+Not overloaded.  
+Not confusing.  
+Not something where you constantly wonder what’s happening with your data.
 
----
-
-## Key Principles
-
-- Data minimization by design
-- End-to-end privacy-oriented architecture (planned)
-- Fully customizable user experience
-- Real-time synchronization across all clients
-- Scalable and modular backend systems
+Just a simple, clean and comfortable way to talk to people.
 
 ---
 
-## Core Features
+# What Veyo is
 
-### Messaging Layer
-- Real-time private messaging
-- Group chat support
-- Message delivery states (sent, delivered, read)
-- Typing indicators
-- Persistent chat history
+Veyo is a messaging app inspired by Discord and Telegram, but not trying to copy them.
 
-### User System
-- Secure authentication system
-- Fully customizable user profiles
-- Avatar and banner support
-- Video banner support
-- Optional profile music integration
-- Extended user bio system
+There is no goal to replicate something existing.
 
-### Media System
-- Image, video, and audio uploads
-- Media preview rendering
-- Optimized delivery pipeline (planned CDN integration)
+The goal is to create something that feels:
 
-### Moderation System
-- Automated user onboarding checks
-- Profile content validation
-- Rule enforcement at system level
-- Scalable moderation pipeline (AI-assisted planned)
-
-### Privacy & Security
-- Strong data isolation principles
-- Database hosted in Germany (high compliance environment)
-- Limited internal access to user content
-- Security-first system architecture
-- Ongoing work toward end-to-end encryption
+- smooth  
+- clean  
+- fast  
+- and not annoying to use  
 
 ---
 
-## Demo & Performance Modes
+# Interface
 
-Veyo includes configurable demo modes for performance testing and user experience tuning:
+The interface is built around a glass-style minimal design.
 
-- 720p / 1080p / 2K rendering modes
-- 30 FPS / 60 FPS performance options
-- Optimized UI rendering pipeline
+Soft blur, gentle light, smooth transitions.
 
-These modes are intended for testing scalability and device adaptability.
+The idea is simple:
+you should actually enjoy being inside the app.
 
----
+Messages don’t just pop in instantly — they slide in smoothly like they belong there.
 
-## System Architecture
-
-Veyo is built using a modular client-server architecture designed for scalability and separation of concerns.
-
-```
-Client Layer
-    |
-    | WebSocket / REST API
-    |
-Backend Core
-    |
-    |-- Authentication Service
-    |-- Messaging Engine
-    |-- Profile Service
-    |-- Media Processing Pipeline
-    |-- Moderation Engine
-    |
-Database Layer (Germany-hosted infrastructure)
-```
-
-The system is designed to support horizontal scaling and service isolation.
+There are multiple animation styles because people like different things:
+some prefer fast motion, some slow, some almost static.
 
 ---
 
-## Data Model (Simplified)
+# How it works inside
 
-```
-Users
-- id
-- username
-- password_hash
-- profile_data
-- created_at
+If you ignore the visuals, the system itself is quite simple and split into parts.
 
-Chats
-- id
-- type (private / group)
-- created_at
+## Client
 
-Messages
-- id
-- chat_id
-- sender_id
-- content
-- attachments
-- status
-- created_at
+The app is built using web technologies:
+HTML, JavaScript, CSS.
 
-ChatMembers
-- chat_id
-- user_id
-```
+But it can also be packaged as a desktop application.
+
+It can:
+- run in background  
+- show notifications  
+- behave like a native app  
 
 ---
 
-## Technology Stack (Planned / Used)
+## Server
 
-### Frontend
-- React / Next.js
-- TypeScript
-- WebSocket client layer
-- State management system
+The server handles messaging and synchronization.
 
-### Backend
-- Node.js / NestJS (or Express-based architecture)
-- WebSocket server (real-time communication)
-- REST API layer
-- JWT authentication
+It is built with Node.js.
 
-### Database & Infrastructure
-- PostgreSQL / MongoDB (depending on service layer)
-- Redis (real-time caching / pub-sub)
-- Germany-based hosting infrastructure
-- CDN integration (planned)
+It takes care of:
+- sending and receiving messages  
+- user handling  
+- real-time chat sync  
 
 ---
 
-## Project Structure
+## Database
 
-```
-/client
-  /src
-    /ui
-    /pages
-    /components
-    /services
-    /state
+All data is stored in a separate database system.
 
-/server
-  /src
-    /modules
-      auth
-      chat
-      user
-      media
-      moderation
-    /gateway
-    /config
-    /utils
-```
+It contains users, chats, and messages.
 
 ---
 
-## Roadmap
+# Security
 
-Current development roadmap includes:
-
-- End-to-end encryption implementation
-- Voice and video messaging
-- Advanced moderation system with AI support
-- Mobile application (iOS / Android)
-- Performance optimization for large-scale usage
-- Public API for integrations
-- Group voice channels
+Security in Veyo is not an “extra feature”, it is part of the system itself.
 
 ---
 
-## Status
+## Consent-based communication
 
-Veyo is currently in active early-stage development.
+You cannot message someone directly unless they accept your request.
+
+Communication only starts when both sides agree.
+
+---
+
+## Private data
+
+Some profile data is public, but sensitive information is fully protected.
+
+Only the account owner can access it.
+
+---
+
+## Calls
+
+If you are not part of a call, you simply cannot join it.
+
+The system blocks it automatically.
+
+---
+
+## Anti-spam protection
+
+If someone tries to overload the system, rate limits are triggered.
+
+This keeps everything stable and fair.
+
+---
+
+# What’s next
+
+Veyo is still in development.
+
+It is not a finished product yet.
+
+I’m building it alone, and it will take time to complete.
 
 Estimated timeline:
-- Minimum viable ecosystem: 6–12 months
-- Full production-scale release: 12–24 months
+- minimum around 6 months  
+- up to 1–1.5 years  
 
 ---
 
-## Legal & Privacy Statement
+# Conclusion
 
-Veyo is designed with strict privacy principles. User data is treated as isolated and system-limited. Access to personal content is intentionally restricted by architecture design.
+For me, Veyo is not just a project.
+
+It’s an attempt to build a messenger I would actually want to use every day.
+
+Simple.  
+Clean.  
+Comfortable.
 
 ---
 
-## Credits
+# YouTube
 
-Independent development project.
+https://www.youtube.com/@Hell_BroX
 
-YouTube: https://www.youtube.com/@Hell_BroX
+---
+
+---
+
+# VEYO МЕССЕНДЖЕР
+
+## Мессенджер, который я делаю сам
+
+---
+
+# Введение: зачем вообще Veyo
+
+Если честно, Veyo появился не как “идея компании” или командный проект.
+
+Я просто хотел сделать мессенджер, который ощущается нормально.
+
+Не перегруженный.  
+Не странный.  
+Не такой, где ты постоянно думаешь, что происходит с твоими данными.
+
+Просто удобный и понятный способ общения.
+
+---
+
+# Что такое Veyo
+
+Veyo — это мессенджер, вдохновлённый Discord и Telegram, но не копия.
+
+Нет цели повторять что-то существующее.
+
+Есть цель — сделать продукт, который ощущается:
+
+- плавным  
+- удобным  
+- быстрым  
+- и не раздражающим  
+
+---
+
+# Интерфейс
+
+Интерфейс построен на стеклянном минимализме.
+
+Размытие, мягкий свет, плавные переходы.
+
+Идея простая:
+чтобы тебе было приятно просто находиться в приложении.
+
+Сообщения не появляются резко — они плавно “заходят” на экран.
+
+Есть разные анимации, потому что людям нравится разное:
+кому-то быстро, кому-то плавно, кому-то почти без движения.
+
+---
+
+# Как это работает внутри
+
+Если убрать визуальную часть, система довольно простая и разделена на части.
+
+## Клиент
+
+Приложение сделано на веб-технологиях:
+HTML, JavaScript и CSS.
+
+Но его можно собрать как отдельную программу.
+
+Оно может:
+- работать в фоне  
+- показывать уведомления  
+- выглядеть как нативное приложение  
+
+---
+
+## Сервер
+
+Сервер отвечает за сообщения и синхронизацию.
+
+Он написан на Node.js.
+
+Он обрабатывает:
+- сообщения  
+- пользователей  
+- синхронизацию чатов  
+
+---
+
+## База данных
+
+Все данные хранятся отдельно.
+
+Там находятся пользователи, чаты и сообщения.
+
+---
+
+# Безопасность
+
+Безопасность — это не отдельная функция, а часть системы.
+
+---
+
+## Общение по согласию
+
+Ты не можешь написать человеку без его согласия.
+
+Сначала должен быть запрос и подтверждение.
+
+---
+
+## Личные данные
+
+Часть данных профиля видна всем, но важная информация закрыта.
+
+Доступ есть только у владельца аккаунта.
+
+---
+
+## Звонки
+
+Если ты не участник звонка — ты туда не попадёшь.
+
+Система блокирует это автоматически.
+
+---
+
+## Защита от спама
+
+Если кто-то перегружает систему — включаются ограничения.
+
+Это нужно для стабильной работы.
+
+---
+
+# Что дальше
+
+Veyo всё ещё в разработке.
+
+Это не готовый продукт.
+
+Я делаю его один, и развитие займёт время.
+
+Сроки примерно:
+- минимум 6 месяцев  
+- максимум 1–1.5 года  
+
+---
+
+# Заключение
+
+Veyo для меня — это не просто проект.
+
+Это попытка сделать мессенджер, которым реально приятно пользоваться каждый день.
+
+Простой.  
+Чистый.  
+Удобный.
