@@ -1,3 +1,9 @@
+<button onclick="navigator.clipboard.writeText(document.getElementById('veyo-text').innerText)">
+COPY FULL TEXT
+</button>
+
+<pre id="veyo-text">
+
 # VEYO MESSENGER
 
 ENGLISH VERSION:
@@ -315,3 +321,11 @@ Veyo для меня — это не просто проект.
 Простой.  
 Чистый.  
 Удобный.
+
+---
+
+# YouTube
+
+https://www.youtube.com/@Hell_BroX
+
+</pre>
