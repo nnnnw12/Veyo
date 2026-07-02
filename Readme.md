@@ -1,5 +1,7 @@
 # VEYO MESSENGER
 
+ENGLISH VERSION:
+
 ## A messenger I’m building on my own
 
 ---
@@ -161,6 +163,8 @@ https://www.youtube.com/@Hell_BroX
 ---
 
 # VEYO МЕССЕНДЖЕР
+
+RUSSIAN VERSION (TRANSLATION):
 
 ## Мессенджер, который я делаю сам
 
