@@ -1,9 +1,3 @@
-<button onclick="navigator.clipboard.writeText(document.getElementById('veyo-text').innerText)">
-COPY FULL TEXT
-</button>
-
-<pre id="veyo-text">
-
 # VEYO MESSENGER
 
 ENGLISH VERSION:
